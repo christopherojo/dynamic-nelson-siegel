@@ -76,75 +76,19 @@ Where:
 dynamic-nelson-siegel/
 │
 ├── data/
-│   ├── raw/                # Raw yield curve data (e.g., FRED)
-│   ├── processed/          # Cleaned datasets
 │
 ├── notebooks/
-│   ├── 01_ns_fit.ipynb     # Static Nelson–Siegel fitting
-│   ├── 02_ols_factors.ipynb
-│   ├── 03_kalman_filter.ipynb
-│   ├── 04_smoothing.ipynb
 │
 ├── src/
-│   ├── nelson_siegel.py    # NS function + loadings
-│   ├── kalman.py           # Kalman filter implementation
-│   ├── dns_model.py        # Full DNS pipeline
-│   ├── utils.py
 │
 ├── experiments/
-│   ├── factor_analysis.py
-│   ├── forecasting.py
 │
 ├── results/
-│   ├── figures/
-│   ├── tables/
 │
 ├── tests/
-│   ├── test_kalman.py
-│   ├── test_ns.py
 │
 ├── requirements.txt
 ├── README.md
-```
-
----
-
-## Key Results (Planned)
-
-* Smoothed latent factor trajectories
-* Comparison of OLS vs Kalman estimates
-* Yield curve reconstruction accuracy
-* Stability under missing or noisy data
-
----
-
-## Extensions
-
-* Macro-augmented DNS (including economic covariates)
-* Regime-switching factor dynamics
-* Multi-country yield curve modeling
-* Trading signals based on factor mispricing
-
----
-
-## Setup
-
-```
-pip install -r requirements.txt
-```
-
----
-
-## Usage
-
-Example workflow:
-
-```
-from src.dns_model import DNSModel
-
-model = DNSModel(data)
-model.fit()
-factors = model.get_factors()
 ```
 
 ---
